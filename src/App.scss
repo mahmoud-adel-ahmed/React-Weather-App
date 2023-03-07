@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 1rem;
+  @media screen and (min-width: 640px) {
+    font-size: 1.5rem;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  @media screen and (min-width: 640px) {
+    font-size: 6rem;
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    no-repeat url(./components/assets/sunset.jpg) center center/cover;
+  color: #fff;
+  text-transform: capitalize;
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 1.5rem 1rem;
+    input {
+      padding: 0.7rem 1.5rem;
+      width: 100%;
+      border-radius: 25px;
+      font-size: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.1);
+      outline: 0;
+      caret-color: rgba(255, 255, 255, 0.8);
+      color: #f8f8f8;
+      @media screen and (min-width: 640px) {
+        font-size: 1.2rem;
+      }
+      &::placeholder {
+        color: #f8f8f8;
+      }
+    }
+  }
+  .container {
+    width: 100%;
+    max-width: 800px;
+    height: 700px;
+    margin: auto;
+    padding: 0 1rem;
+    padding-top: 9%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .top {
+      width: 100%;
+      margin: 0.5rem auto;
+      .temp {
+        margin-top: 0.5rem;
+      }
+      .desc {
+        position: relative;
+        left: 100%;
+        bottom: 5%;
+        transform-origin: 0 0;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        p {
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .bottom {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      text-align: center;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 1rem;
+      margin-bottom: 4rem;
+      gap: 1rem;
+    }
+  }
+  .error,
+  .loading {
+    margin: 1.5rem 0;
+    h3 {
+      text-align: center;
+    }
+  }
+}
